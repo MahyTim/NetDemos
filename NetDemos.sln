@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic", "Dynamic\Dynamic.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLR", "DLR\DLR.csproj", "{89FA4434-7C5A-4C7F-8461-99B22CB1CB70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpandoObject", "ExpandoObject\ExpandoObject.csproj", "{EA382ABE-DE18-4D80-BE15-8BFF0918B362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{89FA4434-7C5A-4C7F-8461-99B22CB1CB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89FA4434-7C5A-4C7F-8461-99B22CB1CB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89FA4434-7C5A-4C7F-8461-99B22CB1CB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA382ABE-DE18-4D80-BE15-8BFF0918B362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA382ABE-DE18-4D80-BE15-8BFF0918B362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA382ABE-DE18-4D80-BE15-8BFF0918B362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA382ABE-DE18-4D80-BE15-8BFF0918B362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
