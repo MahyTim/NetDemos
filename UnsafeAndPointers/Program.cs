@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Text;
 using static System.Console;
 
 namespace UnsafeAndPointers
@@ -9,13 +10,68 @@ namespace UnsafeAndPointers
         static void Main(string[] args)
         {
             //We_all_live_in_a_container();
-            Hello_Pointers();
+            //Hello_Pointers();
+            Hello_MemorySpace();
+        }
+
+        private unsafe static void Hello_MemorySpace()
+        {
+            // var pointer = Marshal.AllocHGlobal(cb: sizeof(Person));
+            // Console.WriteLine(pointer);
+            // Marshal.StructureToPtr(new Person()
+            // {
+            //     Age = 37,
+            //     NumberOfChildren = 2
+            // },pointer, false);
+            // Console.WriteLine(Marshal.ReadInt32(pointer ));
+            //
+            // var person = Marshal.PtrToStructure<Person>(pointer);
+            // Console.WriteLine(person.Age);
+            // Marshal.FreeHGlobal(pointer);
+
+            
+            
+            
+            
+
+            // Person[] array = new Person[2];
+            // array[0] = new Person {Age = 18, NumberOfChildren = 5};
+            // array[1] = new Person {Age = 20, NumberOfChildren = 1};
+            // GCHandle handle = GCHandle.Alloc(array, GCHandleType.Pinned);
+            // try
+            // {
+            //     IntPtr pointer = handle.AddrOfPinnedObject();
+            //     int[] copy = new int[array.Length*2];
+            //     Marshal.Copy(pointer, copy, 0, copy.Length);
+            //     for (int i = 0; i < copy.Length; i++)
+            //     {
+            //         Console.WriteLine(copy[i]);
+            //     }
+            // }
+            // finally
+            // {
+            //     if (handle.IsAllocated)
+            //         handle.Free();
+            // }
+
+            
+            
+            
+
+            // var pointer = Marshal.AllocHGlobal(cb: 2 * 4);
+            // var bytes = Encoding.ASCII.GetBytes("Test");
+            // for (int i = 0; i < bytes.Length; i++)
+            // {
+            //     Marshal.WriteByte(pointer + i, bytes[i]);
+            // }
+            //
+            // var s = Marshal.PtrToStringAnsi(pointer,4);
+            // Console.WriteLine(s);
         }
 
         private static unsafe void Hello_Pointers()
         {
             //TODO: void*
-            //TODO: structs
             //TODO: statics & fixed
 
             // Keyword on method (scoped also allowed)
@@ -52,6 +108,12 @@ namespace UnsafeAndPointers
             //
             // Console.WriteLine(pointerToPerson->Get(0));
             // Console.WriteLine(pointerToPerson->Get(1));
+
+
+            // var pointer = Marshal.OffsetOf(typeof(Person), "Age");
+            // Console.WriteLine(pointer);
+            // pointer = Marshal.OffsetOf(typeof(Person), "NumberOfChildren");
+            // Console.WriteLine(pointer);
         }
 
         public struct Person
@@ -59,7 +121,7 @@ namespace UnsafeAndPointers
             public int NumberOfChildren;
             public int Age;
         }
-        
+
         // //[StructLayout(LayoutKind.Explicit)]
         // public struct Person
         // {
