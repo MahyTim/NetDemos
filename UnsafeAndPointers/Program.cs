@@ -7,11 +7,32 @@ namespace UnsafeAndPointers
 {
     class Program
     {
+        private static int I_am_static = 5;
+        
         static void Main(string[] args)
         {
             //We_all_live_in_a_container();
             //Hello_Pointers();
-            Hello_MemorySpace();
+            //Hello_MemorySpace();
+            //Fix_it();
+        }
+
+        private unsafe static void Fix_it()
+        {
+            // int z = 10;
+            // int* zPointer = &z;
+            // int x = 20;
+            // int* xPointer = &z;
+            //
+            // Console.WriteLine((long) zPointer);
+            // Console.WriteLine((long) xPointer);
+            //
+            // int* pointer = &I_am_static;
+            // {
+            //     Console.WriteLine((long) pointer);
+            //     GC.Collect();
+            //     Console.WriteLine((long) pointer);
+            // }
         }
 
         private unsafe static void Hello_MemorySpace()
