@@ -22,10 +22,11 @@ namespace UnsafeAndPointers
             // int z = 10;
             // int* zPointer = &z;
             // int x = 20;
-            // int* xPointer = &z;
+            // int* xPointer = &x;
             //
             // Console.WriteLine((long) zPointer);
             // Console.WriteLine((long) xPointer);
+          
             //
             // int* pointer = &I_am_static;
             // {
