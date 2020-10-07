@@ -12,7 +12,7 @@ namespace UnsafeAndPointers
         static void Main(string[] args)
         {
             //We_all_live_in_a_container();
-            //Hello_Pointers();
+            Hello_Pointers();
             //Hello_MemorySpace();
             //Fix_it();
         }
@@ -93,14 +93,11 @@ namespace UnsafeAndPointers
 
         private static unsafe void Hello_Pointers()
         {
-            //TODO: void*
-            //TODO: statics & fixed
-
             // Keyword on method (scoped also allowed)
             // See csproj
 
-            // var age = 15;
-            // int* agePointer = &age;
+             // var age = 15;
+             // int* agePointer = &age;
             // var letter = 'A';
             // char* letterPointer = &letter;
             //
@@ -113,6 +110,11 @@ namespace UnsafeAndPointers
             //
             // char** pointerToLetterPointer = &letterPointer;
             // Console.WriteLine($"{(long)pointerToLetterPointer} points to {(long)letterPointer} points to {letter}");
+
+
+            // var voidPointer = (void*) &age;
+            // Console.WriteLine((long) voidPointer);
+            
 
             // Person person = new Person() {Age = 37, NumberOfChildren = 2};
             // Person* pointerToPerson = &person;
