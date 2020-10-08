@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using static System.Console;
@@ -12,9 +13,33 @@ namespace UnsafeAndPointers
         static void Main(string[] args)
         {
             //We_all_live_in_a_container();
-            Hello_Pointers();
+            //Hello_Pointers();
             //Hello_MemorySpace();
             //Fix_it();
+            //Helper_classes();
+        }
+
+        private unsafe static void Helper_classes()
+        {
+            var person = new Person();
+            var pointerToPerson = Unsafe.AsPointer(ref person);
+            
+            Unsafe.Write(pointerToPerson, new Person()
+            {
+                Age = 5
+            });
+
+            person = Unsafe.Read<Person>(pointerToPerson);
+            Console.WriteLine(person.Age);
+            
+            var copiedPerson = new Person();
+            Unsafe.Copy(ref copiedPerson, pointerToPerson);
+            Console.WriteLine(copiedPerson.Age);
+            
+            Unsafe.InitBlock(pointerToPerson, Byte.MinValue, 8);
+            Console.WriteLine(copiedPerson.Age);
+            Console.WriteLine(Unsafe.Read<Person>(pointerToPerson).Age);
+            
         }
 
         private unsafe static void Fix_it()
