@@ -21,6 +21,8 @@ namespace UnsafeAndPointers
 
         private unsafe static void Helper_classes()
         {
+            //https://github.com/DotNetCross/Memory.Unsafe
+            
             var person = new Person();
             var pointerToPerson = Unsafe.AsPointer(ref person);
             
